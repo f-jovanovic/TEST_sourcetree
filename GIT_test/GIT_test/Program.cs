@@ -40,7 +40,7 @@ namespace GIT_test
                             Console.Write(": ");
                             tmpChoice = Console.ReadLine();
                         }
-                        
+
                         people.Add(newPerson);
                         Console.WriteLine("\n\n<<Continue>>");
                         Console.ReadKey();
@@ -49,7 +49,7 @@ namespace GIT_test
                     case "2":
                         foreach (var item in people)
                         {
-                            
+
                             Console.WriteLine("Name: " + item.Name);
                             int tmp = 0;
                             foreach (var help in item.numbers)
@@ -58,6 +58,28 @@ namespace GIT_test
                                 Console.WriteLine("Phone number {0}: " + help, tmp);
                             }
                             Console.WriteLine();
+                        }
+
+                        Console.WriteLine("\n\n<<Continue>>");
+                        Console.ReadKey();
+                        break;
+
+                    case "3":
+                        Console.WriteLine("Enter name to search for: ");
+                        string tmpSearch = Console.ReadLine();
+                        foreach (var item in people)
+                        {
+                            if (item.Name.Contains(tmpSearch))
+                            {
+                                Console.WriteLine("Name: " + item.Name);
+                                int tmp = 0;
+                                foreach (var help in item.numbers)
+                                {
+                                    tmp++;
+                                    Console.WriteLine("Phone number {0}: " + help, tmp);
+                                }
+                                Console.WriteLine();
+                            }
                         }
 
                         Console.WriteLine("\n\n<<Continue>>");
