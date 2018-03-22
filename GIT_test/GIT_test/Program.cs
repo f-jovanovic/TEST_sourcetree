@@ -10,6 +10,14 @@ namespace GIT_test
     {
         static void Main(string[] args)
         {
+            string choice = "";
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("WELCOME\n1. Name entry \n2. Phone number entry\n3. Show all\n4. Search by name \nx - EXIT");
+                Console.Write(": ");
+                choice = Console.ReadLine();
+            } while (choice != "x");
         }
     }
 }
